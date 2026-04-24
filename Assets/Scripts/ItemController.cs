@@ -2,12 +2,13 @@
 
 public class ItemController : MonoBehaviour
 {
-    [SerializeField] private float dropSpeed = -0.03f;
+    [HideInInspector] public float DropSpeed = -0.03f;
+
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0.0f, this.dropSpeed, 0.0f);
+        transform.Translate(0.0f, this.DropSpeed, 0.0f);
 
         if (transform.position.y < -1.0f)
         {

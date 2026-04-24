@@ -40,10 +40,12 @@ public class BasketController : MonoBehaviour
         if (other.gameObject.CompareTag("Apple") == true)
         {
             this.audioSource.PlayOneShot(this.getSE);
+            GameManager.Instance.GetApple();
         }
         else if (other.gameObject.CompareTag("Bomb") == true)
         {
             this.audioSource.PlayOneShot(this.damageSE);
+            GameManager.Instance.GetBomb();
         }
 
         Destroy(other.gameObject);
